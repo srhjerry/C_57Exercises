@@ -13,8 +13,11 @@ int main(void){
 
     squrFT = length*width;
     gallonNum = (int)squrFT/350;
-    printf("You will need to purchase %d gallons of\n", gallonNum+1);
-    printf("paint to cover %.3f square feet.\n", squrFT);
+	if((int)squrFT%350)
+		gallonNum++;
+   
+	printf("You will need to purchase %d gallons of\n", gallonNum);
+	printf("paint to cover %.3f square feet.\n", squrFT);
 
     return 0;
 }
